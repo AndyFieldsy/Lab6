@@ -20,50 +20,143 @@ var firstandpike = {
 };
 var ulEl = document.createElement('ul');
 
-for(var i = 0; i < hour.length; i++) {
+for(var i = 0; i < hour.length-1; i++) {
+  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
   var liEl = document.createElement('li');
   liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
   ulEl.appendChild(liEl);
   var hourSection = document.getElementById('hour');
   hourSection.appendChild(ulEl);
 }
+var liElA  = document.createElement('li');
+ulEl.appendChild(liElA);
+liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
 
 function getRandom(min,max) {
   return Math.random() * (max - min) + min;
 }
 console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
 
-var counter = 0;
-while (counter < 15) {
-  for(var j = 0; j < hour.length; j++); {
-    firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
-  }
-  counter ++;
+console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
+
+
+
+
+
+var firstandpike = {
+  min: 3,
+  max: 24,
+  AvgCookieSale: 1.2,
+  customerPerHour: [],
+};
+var ulEl = document.createElement('ul');
+
+for(var i = 0; i < hour.length-1; i++) {
+  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  var liEl = document.createElement('li');
+  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  ulEl.appendChild(liEl);
+  var hourSection = document.getElementById('hour');
+  hourSection.appendChild(ulEl);
 }
+var liElA  = document.createElement('li');
+ulEl.appendChild(liElA);
+liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
 
-
-// for(var k = 0; k < hour.length; k++) {
-//   firstandpike.CustomerPerHour[k];
-// }
+function getRandom(min,max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
 
 console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
 
-console.log(firstandpike.customerPerHour);
-
-// var seatac = {
-//   minCustomer: 3,
-//   maxCustomer: 24,
-//   AvgCookieSale: 1.2,
-// };
-
-// var ul2El = document.createElement('ul');
-
-// for(var i2 = 0; i2 < hour.length; i2++) {
-//   var li2El = document.createElement('li');
-//   li2El.textContent = hour[i2];
-//   ul2El.appendChild(li2El);
-// }
-// var hour2Section = document.getElementById('hour');
-// hour2Section.appendChild(ul2El);
 
 
+
+
+var firstandpike = {
+  min: 11,
+  max: 38,
+  AvgCookieSale: 3.7,
+  customerPerHour: [],
+};
+var ulEl = document.createElement('ul');
+
+for(var i = 0; i < hour.length-1; i++) {
+  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  var liEl = document.createElement('li');
+  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  ulEl.appendChild(liEl);
+  var hourSection = document.getElementById('hour');
+  hourSection.appendChild(ulEl);
+}
+var liElA  = document.createElement('li');
+ulEl.appendChild(liElA);
+liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+
+function getRandom(min,max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+
+console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
+
+
+
+
+var firstandpike = {
+  min: 20,
+  max: 38,
+  AvgCookieSale: 2.3,
+  customerPerHour: [],
+};
+var ulEl = document.createElement('ul');
+
+for(var i = 0; i < hour.length-1; i++) {
+  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  var liEl = document.createElement('li');
+  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  ulEl.appendChild(liEl);
+  var hourSection = document.getElementById('hour');
+  hourSection.appendChild(ulEl);
+}
+var liElA  = document.createElement('li');
+ulEl.appendChild(liElA);
+liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+
+function getRandom(min,max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+
+console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
+
+
+
+
+var firstandpike = {
+  min: 2,
+  max: 16,
+  AvgCookieSale: 4.6,
+  customerPerHour: [],
+};
+var ulEl = document.createElement('ul');
+
+for(var i = 0; i < hour.length-1; i++) {
+  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  var liEl = document.createElement('li');
+  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  ulEl.appendChild(liEl);
+  var hourSection = document.getElementById('hour');
+  hourSection.appendChild(ulEl);
+}
+var liElA  = document.createElement('li');
+ulEl.appendChild(liElA);
+liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+
+function getRandom(min,max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+
+console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
