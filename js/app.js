@@ -15,8 +15,11 @@ var hour = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '
 var firstandpike = {
   min: 23,
   max: 65,
-  AvgCookieSale: 6.3,
+  avgSale: 6.3,
   customerPerHour: [],
+  cookiePerHour: [],
+
+  
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
@@ -48,8 +51,11 @@ console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all
 var seatac = {
   min: 3,
   max: 24,
-  AvgCookieSale: 1.2,
+  avgSale: 1.2,
   customerPerHour: [],
+  cookiePerHour: [],
+
+  
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
@@ -81,8 +87,10 @@ console.log(seatac.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbe
 var seacenter = {
   min: 11,
   max: 38,
-  AvgCookieSale: 3.7,
+  avgSale: 3.7,
   customerPerHour: [],
+  cookiePerHour: [],
+
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
@@ -113,8 +121,10 @@ console.log(seacenter.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all nu
 var caphill = {
   min: 20,
   max: 38,
-  AvgCookieSale: 2.3,
+  avgSale: 2.3,
   customerPerHour: [],
+  cookiePerHour: [],
+
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
@@ -145,8 +155,10 @@ console.log(caphill.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numb
 var alki = {
   min: 2,
   max: 16,
-  AvgCookieSale: 4.6,
+  avgSale: 4.6,
   customerPerHour: [],
+  cookiePerHour: [],
+
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
