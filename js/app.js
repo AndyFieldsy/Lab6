@@ -26,6 +26,7 @@ var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
 liEl.textContent = '1st and Pike location';
 ulEl.appendChild(liEl);
+
 for(var i = 0; i < hour.length-1; i++) {
   firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
   var liEl = document.createElement('li');
@@ -46,12 +47,12 @@ console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests c
 console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
 
 
-
-// var CTR = document.createElement('tr');
-// var CTH = document.createElement('th');
-// var CTB = document.createElement('table');
-// CTR.textcontent = 'testtesttest';
-// CTB.appendChild(CTR);
+// for (i = 0; i < length.hour; i++) {
+//   var trTxt = document.createElement('tr');
+//   trTxt.testContent = 'testtesttest';
+//   var x = document.getElementById('table');
+//   x.appendChild(trTxt);
+// }
 
 
 
