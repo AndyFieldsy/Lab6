@@ -19,7 +19,9 @@ var firstandpike = {
   customerPerHour: [],
 };
 var ulEl = document.createElement('ul');
-
+var liEl = document.createElement('li');
+liEl.textContent = '1st and Pike location';
+ulEl.appendChild(liEl);
 for(var i = 0; i < hour.length-1; i++) {
   firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
   var liEl = document.createElement('li');
@@ -43,120 +45,128 @@ console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all
 
 
 
-var firstandpike = {
+var seatac = {
   min: 3,
   max: 24,
   AvgCookieSale: 1.2,
   customerPerHour: [],
 };
 var ulEl = document.createElement('ul');
-
+var liEl = document.createElement('li');
+liEl.textContent = 'Seatac Airport location';
+ulEl.appendChild(liEl);
 for(var i = 0; i < hour.length-1; i++) {
-  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  seatac.customerPerHour.push(Math.round(getRandom(seatac.min,seatac.max)));
   var liEl = document.createElement('li');
-  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  liEl.textContent = hour[i] + seatac.customerPerHour[i];
   ulEl.appendChild(liEl);
   var hourSection = document.getElementById('hour');
   hourSection.appendChild(ulEl);
 }
 var liElA  = document.createElement('li');
 ulEl.appendChild(liElA);
-liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+liElA.textContent = hour[15] + seatac.customerPerHour.reduce((a,b) => a + b, 0);
 
 function getRandom(min,max) {
   return Math.random() * (max - min) + min;
 }
-console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+console.log(Math.round(getRandom(seatac.min,seatac.max))); //tests code
 
-console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
-
-
+console.log(seatac.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
 
 
 
-var firstandpike = {
+
+
+var seacenter = {
   min: 11,
   max: 38,
   AvgCookieSale: 3.7,
   customerPerHour: [],
 };
 var ulEl = document.createElement('ul');
-
+var liEl = document.createElement('li');
+liEl.textContent = 'Seattle Center location';
+ulEl.appendChild(liEl);
 for(var i = 0; i < hour.length-1; i++) {
-  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  seacenter.customerPerHour.push(Math.round(getRandom(seacenter.min,seacenter.max)));
   var liEl = document.createElement('li');
-  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  liEl.textContent = hour[i] + seacenter.customerPerHour[i];
   ulEl.appendChild(liEl);
   var hourSection = document.getElementById('hour');
   hourSection.appendChild(ulEl);
 }
 var liElA  = document.createElement('li');
 ulEl.appendChild(liElA);
-liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+liElA.textContent = hour[15] + seacenter.customerPerHour.reduce((a,b) => a + b, 0);
 
 function getRandom(min,max) {
   return Math.random() * (max - min) + min;
 }
-console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+console.log(Math.round(getRandom(seacenter.min,seacenter.max))); //tests code
 
-console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
-
-
+console.log(seacenter.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
 
 
-var firstandpike = {
+
+
+var caphill = {
   min: 20,
   max: 38,
   AvgCookieSale: 2.3,
   customerPerHour: [],
 };
 var ulEl = document.createElement('ul');
-
+var liEl = document.createElement('li');
+liEl.textContent = 'Capitol Hill location';
+ulEl.appendChild(liEl);
 for(var i = 0; i < hour.length-1; i++) {
-  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  caphill.customerPerHour.push(Math.round(getRandom(caphill.min,caphill.max)));
   var liEl = document.createElement('li');
-  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  liEl.textContent = hour[i] + caphill.customerPerHour[i];
   ulEl.appendChild(liEl);
   var hourSection = document.getElementById('hour');
   hourSection.appendChild(ulEl);
 }
 var liElA  = document.createElement('li');
 ulEl.appendChild(liElA);
-liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+liElA.textContent = hour[15] + caphill.customerPerHour.reduce((a,b) => a + b, 0);
 
 function getRandom(min,max) {
   return Math.random() * (max - min) + min;
 }
-console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+console.log(Math.round(getRandom(caphill.min,caphill.max))); //tests code
 
-console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
-
-
+console.log(caphill.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
 
 
-var firstandpike = {
+
+
+var alki = {
   min: 2,
   max: 16,
   AvgCookieSale: 4.6,
   customerPerHour: [],
 };
 var ulEl = document.createElement('ul');
-
+var liEl = document.createElement('li');
+liEl.textContent = 'Alki location';
+ulEl.appendChild(liEl);
 for(var i = 0; i < hour.length-1; i++) {
-  firstandpike.customerPerHour.push(Math.round(getRandom(firstandpike.min,firstandpike.max)));
+  alki.customerPerHour.push(Math.round(getRandom(alki.min,alki.max)));
   var liEl = document.createElement('li');
-  liEl.textContent = hour[i] + firstandpike.customerPerHour[i];
+  liEl.textContent = hour[i] + alki.customerPerHour[i];
   ulEl.appendChild(liEl);
   var hourSection = document.getElementById('hour');
   hourSection.appendChild(ulEl);
 }
 var liElA  = document.createElement('li');
 ulEl.appendChild(liElA);
-liElA.textContent = hour[15] + firstandpike.customerPerHour.reduce((a,b) => a + b, 0);
+liElA.textContent = hour[15] + alki.customerPerHour.reduce((a,b) => a + b, 0);
 
 function getRandom(min,max) {
   return Math.random() * (max - min) + min;
 }
-console.log(Math.round(getRandom(firstandpike.min,firstandpike.max))); //tests code
+console.log(Math.round(getRandom(alki.min,alki.max))); //tests code
 
-console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
+console.log(alki.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbers in array.
