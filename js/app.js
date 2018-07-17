@@ -59,7 +59,7 @@ var pike = {
   minCustomers: 23,
   maxCustomers: 54,
   avgSales: 3.4,
-  hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm'],
+  hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   customersPerHour: [],
   cookiesPerHour: [],
   dailyTotal: 0,
@@ -110,7 +110,7 @@ var pike = {
 
 
 // Finally; Run render() for each store we create!
-var stores = [pike, ];
+var stores = [pike, seatac, seacen, caphill, alki];
 for (var store of stores) {
   store.render();
 }
