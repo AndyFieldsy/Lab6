@@ -13,13 +13,14 @@ var hour = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '
 
 
 var firstandpike = {
+  name: 'First and Pike',
   min: 23,
   max: 65,
   avgSale: 6.3,
   customerPerHour: [],
   cookiePerHour: [],
 
-  
+
 };
 var ulEl = document.createElement('ul');
 var liEl = document.createElement('li');
@@ -46,9 +47,16 @@ console.log(firstandpike.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all
 
 
 
+// var CTR = document.createElement('tr');
+// var CTH = document.createElement('th');
+// var CTB = document.createElement('table');
+// CTR.textcontent = 'testtesttest';
+// CTB.appendChild(CTR);
+
 
 
 var seatac = {
+  name: 'Seatac Airport',
   min: 3,
   max: 24,
   avgSale: 1.2,
@@ -85,6 +93,7 @@ console.log(seatac.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numbe
 
 
 var seacenter = {
+  name: 'Seattle Center',
   min: 11,
   max: 38,
   avgSale: 3.7,
@@ -119,6 +128,7 @@ console.log(seacenter.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all nu
 
 
 var caphill = {
+  name: 'Capitol Hill',
   min: 20,
   max: 38,
   avgSale: 2.3,
@@ -153,6 +163,7 @@ console.log(caphill.customerPerHour.reduce((a,b) => a + b, 0)); // Adds all numb
 
 
 var alki = {
+  name: 'Alki',
   min: 2,
   max: 16,
   avgSale: 4.6,
