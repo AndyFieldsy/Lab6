@@ -31,7 +31,6 @@ var pike = {
 
   calculateSales: function() {
     pike.calculateCustomers();
-
     }
   },
 
