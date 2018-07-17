@@ -1,3 +1,4 @@
+'use strict';
 // // blank template for starting projects
 
 // // Lab 7 and in class notes
@@ -45,18 +46,76 @@
 
 
 // Create the document
-function Store(name, minCustomer, maxCustomer, avgSales, hours, customersPerHour, cookiesPerHour, dailyTotal) {
+
+var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+
+function Store(name, minCustomer, maxCustomer, avgSales, customersPerHour, cookiesPerHour, dailyTotal) {
   this.name = name;
   this.minCustomer = minCustomer;
   this.maxCustomer = maxCustomer;
   this.avgSales = avgSales;
-  this.hours = hours;
   this.customersPerHour = customersPerHour;
   this.cookersPerHour = cookiesPerHour;
   this.dailyTotal = dailyTotal;
 }
 
- new Store('First and Pike', )
+var pike = new Store('First and Pike', 23, 65, 6.3, [], [], 0);
+var seatac = new Store('Seatac Airport', 3, 24, 1.2, [], [], 0);
+var seacen = new Store('Seattle Center',11, 38, 3.7, [], [], 0);
+var caphill = new Store('Capitol Hill', 20, 38, 2.3, [], [], 0);
+var alki = new Store('Alki', 2, 16, 4.6, [], [], 0);
+
+
+Store.prototype.generateRandom = function() {
+  return Math.ceil(Math.random() * (this.maxCustomer - this.minCustomer) + this.minCustomer);
+};
+
+Store.prototype.calculateCustomers = function() {
+  var random = Math.ceil(this.generateRandom(this.minCustomer, this.maxCustomer));
+  this.customersPerHour.push(random);
+  return this.customersPerHour;
+};
+
+Store.prototype.calculateTotal = function() {
+  return this.customersPerHour.reduce((a,b) => a + b, 0);
+};
+
+for (var i = 0; i < hours.length; i++) {
+  pike.generateRandom();
+  pike.calculateCustomers();
+  pike.calculateTotal();
+  seatac.generateRandom();
+  seatac.calculateCustomers();
+  seatac.calculateTotal();
+  seacen.generateRandom();
+  seacen.calculateCustomers();
+  seacen.calculateTotal();
+  caphill.generateRandom();
+  caphill.calculateCustomers();
+  caphill.calculateTotal();
+  alki.generateRandom();
+  alki.calculateCustomers();
+  alki.calculateTotal();
+}
+
+
+
+
+// Store.prototype.calculateSales() {
+  
+//   for (var numCustomers of store.customersPerHour) {
+//     var cookies = Math.ceil(store.avgSales * numCustomers);
+//     store.cookiesPerHour.push(cookies);
+//     store.dailyTotal += cookies;
+//   }
+//   return pike.cookiesPerHour; // Unnecessary - for demo only
+// }
+
+
+
+
+
 
 // 2. Multipy rando by avgSales
 
@@ -64,53 +123,45 @@ function generateRandom(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-var pike = {
-  name: 'First and Pike',
-  minCustomers: 23,
-  maxCustomers: 65,
-  avgSales: 6.3,
-  hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
-  customersPerHour: [],
-  cookiesPerHour: [],
-  dailyTotal: 0,
+var oldpike = {
   calculateCustomers: function() {
     // 1. Iterate thru hours
     // 2. For each hour, run rando generator
     // 3. Push to customersPerHour
 
-    // for (var i = 0; i < pike.hours.length; i++) {}
-    for(var hour of pike.hours) {
-      var rando = generateRandom(pike.minCustomers, pike.maxCustomers);
-      pike.customersPerHour.push(rando);
+    // for (var i = 0; i < oldpike.hours.length; i++) {}
+    for(var hour of hours) {
+      var rando = generateRandom(oldpike.minCustomers, oldpike.maxCustomers);
+      oldpike.customersPerHour.push(rando);
     }
-    return pike.customersPerHour; // Unnecessary - for demo only
+    return oldpike.customersPerHour; // Unnecessary - for demo only
   },
   calculateSales: function() {
-    pike.calculateCustomers();
+    oldpike.calculateCustomers();
 
-    for (var numCustomers of pike.customersPerHour) {
-      var cookies = Math.ceil(pike.avgSales * numCustomers);
-      pike.cookiesPerHour.push(cookies);
-      pike.dailyTotal += cookies;
+    for (var numCustomers of oldpike.customersPerHour) {
+      var cookies = Math.ceil(oldpike.avgSales * numCustomers);
+      oldpike.cookiesPerHour.push(cookies);
+      oldpike.dailyTotal += cookies;
     }
-    return pike.cookiesPerHour; // Unnecessary - for demo only
+    return oldpike.cookiesPerHour; // Unnecessary - for demo only
   },
   render: function() {
-    pike.calculateSales();
+    oldpike.calculateSales();
 
     var ulEl = document.createElement('ul');
     var h2El = document.createElement('h2');
-    h2El.textContent = pike.name;
+    h2El.textContent = oldpike.name;
     ulEl.appendChild(h2El);
 
-    for (var idx in pike.hours) {
+    for (var idx in oldpike.hours) {
       var liEl = document.createElement('li');
-      liEl.textContent = pike.hours[idx] + ': ' + pike.cookiesPerHour[idx] + ' cookies';
+      liEl.textContent = oldpike.hours[idx] + ': ' + oldpike.cookiesPerHour[idx] + ' cookies';
       ulEl.appendChild(liEl);
     }
 
     var liEltwo = document.createElement('li');
-    liEltwo.textContent = 'Total: ' + pike.dailyTotal;
+    liEltwo.textContent = 'Total: ' + oldpike.dailyTotal;
     ulEl.appendChild(liEltwo);
 
     var mainEl = document.getElementById('main-content');
