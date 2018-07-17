@@ -45,8 +45,18 @@
 
 
 // Create the document
+function Store(name, minCustomer, maxCustomer, avgSales, hours, customersPerHour, cookiesPerHour, dailyTotal) {
+  this.name = name;
+  this.minCustomer = minCustomer;
+  this.maxCustomer = maxCustomer;
+  this.avgSales = avgSales;
+  this.hours = hours;
+  this.customersPerHour = customersPerHour;
+  this.cookersPerHour = cookiesPerHour;
+  this.dailyTotal = dailyTotal;
+}
 
-
+ new Store('First and Pike', )
 
 // 2. Multipy rando by avgSales
 
@@ -57,8 +67,8 @@ function generateRandom(min, max) {
 var pike = {
   name: 'First and Pike',
   minCustomers: 23,
-  maxCustomers: 54,
-  avgSales: 3.4,
+  maxCustomers: 65,
+  avgSales: 6.3,
   hours: ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'],
   customersPerHour: [],
   cookiesPerHour: [],
@@ -107,6 +117,7 @@ var pike = {
     mainEl.appendChild(ulEl);
   },
 };
+
 
 
 // Finally; Run render() for each store we create!
