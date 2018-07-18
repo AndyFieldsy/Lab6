@@ -109,6 +109,9 @@ for (var l = 0; l < hours.length; l++) {
   tdEl2.textContent = hours[l];
   trEl2.appendChild(tdEl2);
 }
+tdEl2 = document.createElement('td');
+tdEl2.textContent = 'Total Customers';
+trEl2.appendChild(tdEl2);
 var semiEl2 = document.getElementById('semi-content');
 semiEl2.appendChild(trEl2);
 
@@ -122,6 +125,9 @@ for (var j = 0; j < 5; j++) {
     tdEl.textContent = stores[j].customersPerHour[k];
     trEl.appendChild(tdEl);
   }
+  tdEl = document.createElement('td');
+  tdEl.textContent = stores[j].dailyTotal;
+  trEl.appendChild(tdEl);
   var semiEl = document.getElementById('semi-content');
   semiEl.appendChild(trEl);
 }
