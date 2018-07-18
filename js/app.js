@@ -102,7 +102,7 @@ for (var i = 0; i < hours.length; i++) {
 
 var trEl2 = document.createElement('tr');
 var tdEl2 = document.createElement('td');
-tdEl2.textContent = 'test';
+tdEl2.textContent = '';
 trEl2.appendChild(tdEl2);
 for (var l = 0; l < hours.length; l++) {
   tdEl2 = document.createElement('td');
@@ -126,18 +126,6 @@ for (var j = 0; j < 5; j++) {
   semiEl.appendChild(trEl);
 }
 
-
-
-// for (var k = 0; k < hours.length; k++) {
-//   var tdEl2 = document.createElement('td');
-//   var trEl2 = document.createElement('tr');
-//   tdEl2.textContent = 'test';
-//   tdEl2.appendChild(trEl2);
-//   var semiEl2 = document.getElementById('');
-//   semiEl2.appendChild(tdEl2);
-// }
-
-
 //   render: function() {
 //     oldpike.calculateSales();
 
@@ -160,6 +148,18 @@ for (var j = 0; j < 5; j++) {
 //     mainEl.appendChild(ulEl);
 //   },
 // };
+
+
+// for (var k = 0; k < hours.length; k++) {
+//   var tdEl2 = document.createElement('td');
+//   var trEl2 = document.createElement('tr');
+//   tdEl2.textContent = 'test';
+//   tdEl2.appendChild(trEl2);
+//   var semiEl2 = document.getElementById('');
+//   semiEl2.appendChild(tdEl2);
+// }
+
+
 
 // Store.prototype.calculateSales() {
 
