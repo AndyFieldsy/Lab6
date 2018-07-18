@@ -170,35 +170,6 @@ formEl.addEventListener('submit', function(event) {
 });
 
 
-var Totals = [];
-function totalSum() {
-  for(var c = 0; c < hours.length; c++){
-    var holder = 0;
-    for(var b = 0; b < stores.length; b++){
-      holder += stores[b].cookiesPerHour[c];
-    }
-    Totals.push(holder);
-  }
-}
-console.log(totalSum());
-
-
-var footr = document.createElement('tr');
-var footd = document.createElement('td');
-footd.textContent = 'Totals: ';
-footr.appendChild(footd);
-for (var m = 0; m < hours.length; m++) {
-  footd = document.createElement('td');
-  footd.textContent = Totals[m];
-  footr.appendChild(footd);
-}
-footd = document.createElement('td');
-footd.textContent = 'test';
-footr.appendChild(footd);
-var footEl = document.getElementById('tfoot');
-footEl.appendChild(footr);
-
-
 var addTable = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
@@ -215,17 +186,52 @@ var addTable = function() {
   var semiEl = document.getElementById('semi-content');
   semiEl.appendChild(trEl);
 
+  Totals = [];
+  totalSum();
+  document.getElementById('tfoot').innerHTML = ' ';
+  totalDisplay();
 };
 
+var Totals = [];
+function totalSum() {
+  for(var c = 0; c < hours.length; c++){
+    var holder = 0;
+    for(var b = 0; b < stores.length; b++){
+      holder += stores[b].cookiesPerHour[c];
+    }
+    Totals.push(holder);
+  }
+}
+
+console.log(totalSum());
+
+function totalDisplay() {
+  var footr = document.createElement('tr');
+  var footd = document.createElement('td');
+  footd.textContent = 'Totals: ';
+  footr.appendChild(footd);
+  for (var m = 0; m < hours.length; m++) {
+    footd = document.createElement('td');
+    footd.textContent = Totals[m];
+    footr.appendChild(footd);
+  }
+  footd = document.createElement('td');
+  footd.textContent = 'test';
+  footr.appendChild(footd);
+  var footEl = document.getElementById('tfoot');
+  footEl.appendChild(footr);
+}
+
+totalDisplay();
 
 
 
 
 
 //   render: function() {
-  //     oldpike.calculateSales();
-  
-  //     var ulEl = document.createElement('ul');
+//     oldpike.calculateSales();
+
+//     var ulEl = document.createElement('ul');
 //     var h2El = document.createElement('h2');
 //     h2El.textContent = oldpike.name;
 //     ulEl.appendChild(h2El);
