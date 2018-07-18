@@ -100,7 +100,17 @@ for (var i = 0; i < hours.length; i++) {
   alki.calculateTotal();
 }
 
-
+var trEl2 = document.createElement('tr');
+var tdEl2 = document.createElement('td');
+tdEl2.textContent = 'test';
+trEl2.appendChild(tdEl2);
+for (var l = 0; l < hours.length; l++) {
+  tdEl2 = document.createElement('td');
+  tdEl2.textContent = hours[l];
+  trEl2.appendChild(tdEl2);
+}
+var semiEl2 = document.getElementById('semi-content');
+semiEl2.appendChild(trEl2);
 
 for (var j = 0; j < 5; j++) {
   var trEl = document.createElement('tr');
@@ -108,7 +118,8 @@ for (var j = 0; j < 5; j++) {
   tdEl.textContent = stores[j].name;
   trEl.appendChild(tdEl);
   for (var k = 0; k < hours.length; k++) {
-    tdEl.textContent = 'test';
+    tdEl = document.createElement('td');
+    tdEl.textContent = stores[j].customersPerHour[k];
     trEl.appendChild(tdEl);
   }
   var semiEl = document.getElementById('semi-content');
