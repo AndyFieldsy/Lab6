@@ -57,7 +57,7 @@ function Store(name, minCustomer, maxCustomer, avgSales, customersPerHour, cooki
   this.maxCustomer = maxCustomer;
   this.avgSales = avgSales;
   this.customersPerHour = customersPerHour;
-  this.cookersPerHour = cookiesPerHour;
+  this.cookiesPerHour = cookiesPerHour;
   this.dailyTotal = dailyTotal;
 
   stores.push(this);
@@ -75,13 +75,13 @@ Store.prototype.generateRandom = function() {
 };
 
 Store.prototype.calculateCustomers = function() {
-  var random = Math.ceil(this.generateRandom(this.minCustomer, this.maxCustomer));
-  this.customersPerHour.push(random);
-  return this.customersPerHour;
+  var random = Math.ceil(this.generateRandom(this.minCustomer, this.maxCustomer) * this.avgSales);
+  this.cookiesPerHour.push(random);
+  return this.cookiesPerHour;
 };
 
 Store.prototype.calculateTotal = function() {
-  this.dailyTotal = this.customersPerHour.reduce((a,b) => a + b, 0);
+  this.dailyTotal = this.cookiesPerHour.reduce((a,b) => a + b, 0);
 };
 
 
@@ -125,7 +125,7 @@ for (var j = 0; j < 5; j++) {
   trEl.appendChild(tdEl);
   for (var k = 0; k < hours.length; k++) {
     tdEl = document.createElement('td');
-    tdEl.textContent = stores[j].customersPerHour[k];
+    tdEl.textContent = stores[j].cookiesPerHour[k];
     trEl.appendChild(tdEl);
   }
   tdEl = document.createElement('td');
