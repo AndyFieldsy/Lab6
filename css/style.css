@@ -39,3 +39,25 @@ td:active, th:active {
     font-style:oblique;
     color: darkolivegreen;
 }
+
+.nav {
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+.nav1, .nav2, .nav3, .nav4 {
+    border: 5px outset cyan;
+    font-weight:bolder;
+    background-color:lightblue;
+    margin:0;
+    padding:10;
+    overflow:hidden;
+    text-align:center;
+}
+
+.nav1:active, .nav2:active, .nav3:active, .nav4:active {
+    border: 5px inset red;
+    background-color: lightgoldenrodyellow;
+}
