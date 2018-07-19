@@ -59,7 +59,7 @@ function Store(name, minCustomer, maxCustomer, avgSales, customersPerHour, cooki
   this.customersPerHour = customersPerHour;
   this.cookiesPerHour = cookiesPerHour;
   this.dailyTotal = dailyTotal;
-  
+
   stores.push(this);
 }
 
@@ -146,6 +146,7 @@ createTable();
 function clicked() {
   console.log('Clicked!');
 }
+
 var pClickel = document.getElementById('p-click');
 pClickel.addEventListener('click', clicked);
 
@@ -224,8 +225,8 @@ function totalDisplay() {
 
 totalDisplay();
 
-
-
+// var head = document.getElementsByTagName('head');
+// head.setAttribute('id', 'test');
 
 
 //   render: function() {

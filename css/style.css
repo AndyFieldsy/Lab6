@@ -1,0 +1,21 @@
+.default {
+    /* display: block; */
+
+}
+
+td, th {border: 1px solid salmon;}
+
+td.active,th.active {
+    border: 1px dashed black;
+}
+
+.clickme {
+    border:2px outset salmon;
+    width:20%;
+    background-color:salmon;
+}
+
+.clickme:active {
+    background-color: lightgrey;
+    border:2px inset salmon;
+}
