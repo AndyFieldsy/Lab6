@@ -59,7 +59,7 @@ function Store(name, minCustomer, maxCustomer, avgSales, customersPerHour, cooki
   this.customersPerHour = customersPerHour;
   this.cookiesPerHour = cookiesPerHour;
   this.dailyTotal = dailyTotal;
-
+  
   stores.push(this);
 }
 
