@@ -1,9 +1,11 @@
-.default {}
+*{outline: dotted 1px red}
 
 td, th {border: 2px solid black;
     background-color: lightblue;
 }
-
+td:hover, th:hover {
+    background-color:blue;
+}
 td:active, th:active {
     border: 1px inset salmon;
     background-color: salmon;
@@ -60,4 +62,19 @@ td:active, th:active {
 .nav1:active, .nav2:active, .nav3:active, .nav4:active {
     border: 5px inset red;
     background-color: lightgoldenrodyellow;
+}
+
+.submit {
+    background-color: grey;
+}
+
+.input {
+    transition:350ms;
+}
+
+.input:hover {
+    background-color: salmon;
+}
+.input:active {
+    background-color:blue;
 }
