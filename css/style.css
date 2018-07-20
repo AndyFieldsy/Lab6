@@ -1,0 +1,21 @@
+
+*{
+}
+
+
+
+.logo {
+    background-color: black;
+    position:relative;
+    left:15%;
+    height:50px;
+    width:50px;
+}
+
+.greybar {
+    width:70%;
+    background-color:lightgrey;
+    color:blue;
+    position:relative;
+    left:15%;
+}
