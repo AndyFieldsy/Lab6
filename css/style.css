@@ -11,11 +11,13 @@ bottom:30px;
 font-size:40px;
 font-weight:bold;
 margin:0;
-font-family:cursive;
+font-family: 'Yellowtail', cursive;
 }
 .undertitle {
 position:relative;
+left:5%;
 margin:0;
+background-color:transparent;
 }
 
 .titletext2{
@@ -24,7 +26,7 @@ left:15%;
 font-size:40px;
 font-weight:bold;
 margin:0;
-font-family: "Arial Black", sans-serif;
+font-family: 'IBM Plex Mono', monospace;
 background-color:transparent;
 }
 .undertitle2{
@@ -34,19 +36,6 @@ margin:0;
 background-color: transparent;
 }
 
-.print {
-    position:relative;
-    left:60%;
-    margin:0;
-    top:50px;
-}
-.printtext {
-    position:relative;
-    left:62%;
-    font-size:10px;
-    margin:0;
-    top:35px;
-}
 
 .listbg {
     position:relative;
@@ -64,10 +53,12 @@ background-color: transparent;
 .p1, .p2, .p3 {
     position:relative;
     left:15%;
+    width:70%;
 }
 
 .logo {
     background-color: black;
+    display:inline-block;
     position:relative;
     left:15%;
     height:50px;
@@ -76,7 +67,7 @@ background-color: transparent;
 .greybar {
     width:70%;
     background-color:lightgrey;
-    color:blue;
+    color:transparent;
     position:relative;
     left:15%;
 }
@@ -84,6 +75,15 @@ background-color: transparent;
 .nav {
     position:relative;
     left:61.5%;
+}
+.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover, .nav5:hover, .nav6:hover, .nav7:hover, .nav8:hover{
+    transition:350ms;
+    border:outset 5px blue;
+    background-color:blue;
+}
+.nav1:active, .nav2:active, .nav3:active, .nav4:active, .nav5:active, .nav6:active, .nav7:active, .nav8:active {
+    transition:350ms;
+    border:inset 5px gold;
 }
 .nav7, .nav8 {
     position:relative;
@@ -93,6 +93,9 @@ background-color: transparent;
 .vanessa, .vantext, .undervantext {
     position:relative;
     left:15%;
+    background-color:transparent;
+    margin-bottom:0;
+    
 }
 
 .vantext {
@@ -103,6 +106,8 @@ background-color: transparent;
     position:relative;
     left:25%;
     bottom:40px;
+    margin-bottom:0;
+    
 }
 li, s {
     background-color:transparent;
@@ -143,7 +148,48 @@ li, s {
     left:50%;
 }
 
+.printdiv {
+    position: relative;
+    left:80%;
+}
+printdivtxt {
+    position: absolute;
+    left:80%;
+}
+
+/* .print {
+    position:relative;
+    left:70%;
+    margin:0;
+    top:50px;
+} */
+/* .printtext {
+    position:relative;
+    left:72%;
+    font-size:10px;
+    margin:0;
+    top:35px;
+    background-color:transparent;
+} */
+
 .foot, .foot2 {
     color:rgb(45,45,45);
     opacity:.7;
+}
+
+.share {
+    position:relative;
+    width:70%;
+    left:15%;
+    bottom:50px;
+    background-color:coral;
+    color:white;
+}
+.share:hover {
+    transition:350ms;
+    border:outset 5px blue;
+}
+.share:active {
+    transition:350ms;
+    border:inset 5px goldenrod;
 }
