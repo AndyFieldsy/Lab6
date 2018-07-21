@@ -48,6 +48,7 @@ background-color: transparent;
     width:70%;
     left:15%;
     margin-top:50px;
+    margin-bottom:20px;
 }
 
 .p1, .p2, .p3 {
@@ -105,7 +106,7 @@ background-color: transparent;
 .undervantext {
     position:relative;
     left:25%;
-    bottom:40px;
+    bottom:20px;
     margin-bottom:0;
     
 }
@@ -132,12 +133,14 @@ li, s {
 }
 .lista {
     position:absolute;
+    font-size:120%;
     left:15%;
     bottom:15%;
     background-color:transparent;
 }
 .listb {
     position:absolute;
+    font-size:120%;
     left:50%;
     bottom:15%;
     background-color:transparent;
@@ -181,7 +184,7 @@ printdivtxt {
     position:relative;
     width:70%;
     left:15%;
-    bottom:50px;
+    bottom:25px;
     background-color:coral;
     color:white;
 }
@@ -192,4 +195,8 @@ printdivtxt {
 .share:active {
     transition:350ms;
     border:inset 5px goldenrod;
+}
+
+.p1, .p2, .p3 {
+    text-indent:30px;
 }
