@@ -5,12 +5,15 @@
 
 var imgs = ['bag.jpg', 'banana.jpg', 'bathroom.jpg', 'boots.jpg', 'breakfast.jpg', 'bubblegum.jpg', 'chair.jpg', 'cthulu.jpg', 'dog-duck.jpg', 'dragon.jpg', 'pen.jpg', 'pet-sweep.jpg', 'scissors.jpg', 'shark.jpg', 'sweep.png', 'tauntaun.jpg', 'unicorn.jpg', 'usb.gif', 'water-can.jpg', 'wine-glass.jpg'];
 var imgObj = [];
+var productArray = [];
 
-function ImageTracker(img) {
-  this.name = img.split('.')[0];
-  this.path = imgs;
-  this.totalClicks = 0;
+function Product(name, path) {
+  this.name = name;
+  this.path = path;
+  this.votes = 0;
+  productArray.push[this];
 }
+
 
 for (var i = 0; i < imgs.length; i++) {
   imgObj.push(new ImageTracker(imgs[i]));
