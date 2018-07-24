@@ -1,3 +1,4 @@
+
 'use strict';
 // // blank template for starting projects
 
@@ -315,3 +316,7 @@ totalDisplay();
 // for (var store of stores) {
 //   store.render();
 // }
+=======
+// blank template for starting projects
+'use strict';
+
