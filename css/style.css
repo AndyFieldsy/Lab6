@@ -1,0 +1,80 @@
+*{outline: dotted 1px red}
+
+td, th {border: 2px solid black;
+    background-color: lightblue;
+}
+td:hover, th:hover {
+    background-color:blue;
+}
+td:active, th:active {
+    border: 1px inset salmon;
+    background-color: salmon;
+}
+
+.clickme {
+    border:2px outset salmon;
+    width:20%;
+    background-color:salmon;
+}
+
+.clickme:active {
+    background-color: lightgrey;
+    border:2px inset salmon;
+}
+
+.mainheader {
+    display: block;
+    color: salmon;
+    border:2px outset salmon;
+    text-align: center;
+}
+
+.fake {
+    font-style:italic;
+
+}
+
+.body2 {
+    border: 2px solid salmon;
+    font-weight:bold;
+    font-size: 20;
+    font-style:oblique;
+    color: darkolivegreen;
+}
+
+.nav {
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+
+.nav1, .nav2, .nav3, .nav4 {
+    border: 5px outset cyan;
+    font-weight:bolder;
+    background-color:lightblue;
+    margin:0;
+    padding:10;
+    overflow:hidden;
+    text-align:center;
+}
+
+.nav1:active, .nav2:active, .nav3:active, .nav4:active {
+    border: 5px inset red;
+    background-color: lightgoldenrodyellow;
+}
+
+.submit {
+    background-color: grey;
+}
+
+.input {
+    transition:350ms;
+}
+
+.input:hover {
+    background-color: salmon;
+}
+.input:active {
+    background-color:blue;
+}
